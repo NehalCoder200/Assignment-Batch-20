@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Sign Up Clone</title>
+  <link rel="stylesheet" href="../Style/signup.css">
+</head>
+<body>
+
+  <div class="signup-container">
+
+    <div class="signup-box">
+
+      <div class="logo">Instagram</div>
+
+      <div class="subtitle">
+        Sign up to see photos and videos from your friends.
+      </div>
+
+      <button class="facebook-btn">
+        Log in with Facebook
+      </button>
+
+      <div class="divider">
+        <span>OR</span>
+      </div>
+
+      <form onsubmit="signupHandler(event)">
+        <input type="email" placeholder="Mobile Number or Email" id="email">
+        <input type="text" placeholder="Full Name" id="fullName">
+        <input type="text" placeholder="Username" id="userName">
+        <input type="password" placeholder="Password" id="password">
+
+        <button type="submit">Sign Up</button>
+      </form>
+
+      <div class="terms">
+        By signing up, you agree to our Terms, Privacy Policy and Cookies Policy.
+      </div>
+
+    </div>
+
+    <div class="login-box">
+      Have an account?
+      <a href="login.html">Log in</a>
+    </div>
+
+  </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../Js/signup.js"></script>
+</html>
