@@ -6,6 +6,8 @@
 // Q1.
 // JavaScript Object kya hota hai? Real-world example ke sath explain karein.
 
+//ANSWER javascript mai object use hota hai data banae keleya is mai ap multi bales save kar sakte
+// hai or real world mai object mai datat store kia jata ha
 
 
 
@@ -27,6 +29,10 @@
 
 
 // Dono tarikon se name access karke dikhayein.
+
+// ANSWER
+// Dot notation console.log(user.name);
+// Bracket console.log(user['name']);
 
 
 
@@ -50,8 +56,10 @@
 // delete student.age;
 
 
+// ANSWER {'Ali','Karachi'}
 
 // console.log(student);
+
 
 
 
@@ -59,6 +67,11 @@
 // Object.keys(), Object.values(), aur Object.entries() kya return karte hain?
 
 // Example ke sath explain karein.
+
+// ANSWER
+//object.keys object ke ander se keys retune karte hai 
+//Object.values object ke ander se value retune karte hai
+//Object.enteries key or value pura pair return karti hai 
 
 
 // Q5.
@@ -68,7 +81,7 @@
 
 
 
-// countProperties({
+// let countProperties = {
 
 // name:"Ali",
 
@@ -76,8 +89,11 @@
 
 // city:"Lahore"
 
-// })
+// }
 
+// ANSWER let count = Object.keys(countProperties).length
+
+// console.log(count);
 
 
 // // Output
@@ -91,6 +107,11 @@
 // Q6.
 // Array aur Object me kya difference hai?
 
+ANSWER
+// arry ma sirf values hoti ha
+// value ko dircet acces karte ha
+
+// Object property se access karte ha 
 
 // Q7.
 // Output predict karein.
@@ -111,24 +132,25 @@
 
 // console.log(arr);
 
+// ANSWER [10,20,30]
 
 
 // Q8.
 // Array ke first aur last element ko print karne ke 2 methods likhein.
 
+// ANSWER 
+// indexOf
+// lastIndexOf
 
 // Q9.
 // Ek function likhein jo array ka sum return kare.
 
 // Example
 
-
-
-
+// ANSWER
+    
 
 // sum([10,20,30])
-
-
 
 // // Output
 
@@ -143,12 +165,14 @@
 
 
 
-// [1,2,2,3,4,4,5]
-
+// let numArry = [1,2,2,3,4,4,5]
 
 
 // Expected Output
 
+// ANSWER 
+// let uniqueArr = [...new Set(numArry)]
+// console.log(uniqueArr);
 
 
 
@@ -162,7 +186,27 @@
 // Q11.
 // Destructuring kya hoti hai?
 
+// Arry destructuring arry ma se element ko nikalna
+// object destructuring object ma se property ko nikalna
+
 // Array aur Object dono ki syntax likhein.
+
+// Array
+// let users = ['Rohan','Majid','Atif','Rashid']
+
+// let [name1,name2, ,name4] = users
+
+// // Object 
+
+// let studentObj = {
+//     name : 'NehalCoder200',
+//     email : 'NehalCoder200@gmail.com',
+//     adderss:{
+//         city: 'Karachi'
+//     }
+// }
+
+// let {email, adderss} = studentObj
 
 
 // Q12.
@@ -182,6 +226,7 @@
 
 // console.log(b);
 
+// ANSWER "blue"
 
 
 // Q13.
@@ -207,14 +252,10 @@
 
 // console.log(age);
 
-
+// ANSWER console loge mein 22
 
 // Q14.
 // Nested Object destructuring karein.
-
-
-
-
 
 // const user = {
 
@@ -232,11 +273,20 @@
 
 // City ko destructuring se nikalein.
 
+// ANSWER 
+// let {city} = user.address
+
+// console.log(city);
+
 
 // Section 4 – Shallow Copy & Deep Copy (15–18)
 
 // Q15.
 // Shallow Copy aur Deep Copy me kya difference hai?
+
+// ANSWER
+// Shallow Copy Object ko upar se copy karta ha nested copy nhi karta
+// Deep Copy object ka new reference create karta ha
 
 
 // Q16.
@@ -270,10 +320,13 @@
 
 // console.log(user1.address.city);
 
+// ANSWER console log mein "Lahore"
 
 
 // Q17.
 // Spread operator se object copy karne par nested object me kya issue hota hai?
+
+// ANSWER ek mein changes karenge dusre mein change automatic ho jayengi
 
 // Explain karein.
 
@@ -281,12 +334,17 @@
 // Q18.
 // JavaScript me Deep Copy banane ke 3 methods likhein.
 
-
+// JSON.parse()
+// JSON.stringify()
+// structuredClone()
 
 // Section 5 – Rest & Spread Operator (19–22)
 
 // Q19.
 // Rest Operator aur Spread Operator me kya difference hai?
+
+// ANSWER rest equal se pelhe ho to rest ho ta ha
+// ANSWER Spread equal ke baat ho to spread ho ta ha
 
 
 // Q20.
@@ -304,7 +362,8 @@
 
 // console.log(newArr);
 
-
+// ANSWER
+// console mein [10,20,30,40]
 
 // Q21.
 // Output batayein.
@@ -323,6 +382,7 @@
 
 // total(10,20,30,40);
 
+// ANSWER console log ma [10,20,30,40]
 
 
 // Q22.
@@ -347,6 +407,23 @@
 // };
 
 
+// ANSWER const obj1 = {
+
+// name:"Ali"
+
+// };
+
+
+
+// const obj2 = {
+// ...obj1,
+// age:20
+
+// };
+
+// console.log(obj2);
+
+
 
 // Expected
 
@@ -368,17 +445,30 @@
 // Q23.
 // map() aur forEach() me kya difference hai?
 
+//  ANSWER
+// forEach() se Attraction or ya jab koe action perform karna ho
+// foreach undefind value reture koti ha
+
+// ANSWER
+// Map() Naya arry banata ha
+// Naya transformed arry reture karta ha
+// jab data ko badal na ho to naya arry banata ha 
+
 
 // Q24.
 // filter() ka use karke sirf even numbers return karein.
 
 
+// let arrNum = [1,2,3,4,5,6]
 
+// ANSWER
+// arrNum.filter(num =>{
+//     if(num % 2 == 0){
+//         console.log(num);
 
-
-// [1,2,3,4,5,6]
-
-
+//     }
+    
+// })
 
 // Expected
 
@@ -393,6 +483,7 @@
 
 // let arrTotal = [10,20,30]
 
+// ANSWER
 // let total = arrTotal.reduce((accumulator,num)=>{
 
 //     return accumulator + num
@@ -412,8 +503,9 @@
 // Q26.
 // find() aur filter() me kya difference hai?
 
+// ANSWER
 // find() check karta ha value ko ha to ture nahi ha to false 
-// arr ma pehle fisrt element doonodta ha jo condition ke satify fawe kataho
+// arr ma pehle fisrt element doonodta ha jo condition ko satify kartaho
 // ek pelhla matching element reture karta ha
 // ek element ya undefind reture karta ha
 // single result ke liye
@@ -430,6 +522,7 @@
 // Q27.
 // call(), apply(), aur bind() me difference explain karein.
 
+// ANSWER
 // Call() Function ko call karta ha ap argument aise bhej sakte ho
 // Apply() bhi function call karta ha bus argument arry ma bhejta ha
 // Bind() function call karta ha argument bhi bheji sakte ho bus reture karta ha

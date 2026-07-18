@@ -106,6 +106,8 @@ arrUser.filter((items)=>{
 
 })
 
+// reduce arry ke saare element ko mila kar ek ho value bana deta ha
+
 let st = ['nehal','coder','ali','imrankhan']
 
 let result = st.reduce((accumulator,srting)=>{
@@ -116,3 +118,26 @@ let result = st.reduce((accumulator,srting)=>{
 console.log(result);
 
 
+
+let string = 'asdfghjkl'
+
+
+let res  = string.split().map((items)=>{
+    console.log('ad',items);
+    return items
+})
+
+console.log(res.join());
+
+
+
+// let arr1 = ['Nehal','Ali','Sufyan','Abdullah','Subhan']
+
+// let arryResult = arr1.map((itemName)=>{
+    // return `MR ${itemName}`
+    
+// })
+
+// console.log(arryResult);
+// // console.log(arr1
+// // );
