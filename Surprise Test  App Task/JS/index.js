@@ -1,39 +1,47 @@
 // console.log('run');
 
 let items = document.getElementById('ekBox')
+let textRead = document.getElementById('textRead')
+
 
 function loadApp() {
 
     let api = fetch('https://dummyjson.com/posts').then((res) => {
         return res.json()
-    }).then((data) => {
+    })
+        .then((data) => {
 
-        let allPosts = data.posts
+            let allPosts = data.posts
 
-        let result = allPosts.map((postArry) => {
+            let result = allPosts.map((postArry) => {
 
-            text = postArry.body
+                text = postArry.body
 
-            let ui = 
-                `<div class="items" id="ekBox">
-                    <p>${text}</p>
-                </div>`
+                return `<p onclick="clickData(event)">${text}</p>`
 
+            })
+            // console.log(result);
 
-            items.innerHTML = ui
+            items.innerHTML = result
 
-
-
+            console.log(items);
+            
 
         })
-
-
-    })
 
     // console.log(api);
 
 
 }
+
+let clickData = (e) =>{
+
+    textRead.innerHTML = e.target.innerHTML
+    
+}
+
+
+
 
 
 loadApp()
