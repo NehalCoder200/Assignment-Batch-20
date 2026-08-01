@@ -82,15 +82,23 @@ nav h1{
 .leftBox{
     height: 100%;
     width: 30%;
-    padding: 20px;
     overflow-y: scroll;
 }
 
 
 .leftBox p {
     font-size: 18px;
-    margin-bottom: 10px;
+    padding: 10px 20px;
     text-align: justify;
+}
+
+.items > p{
+    /* padding-top: 10px; */
+}
+
+.leftBox p:hover{
+    transition: 0.5s;
+    background-color: rgba(128, 128, 128, 0.395);
 }
 
 .rightBox{
