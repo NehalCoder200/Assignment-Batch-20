@@ -1,21 +1,21 @@
 import React from 'react'
 
+let navbar = ['Home',"About",'Campuses','Check Result']
+
 const nav = () => {
-    return (
-        <div className="nav">
-            <h2>SMIT</h2>
+    return <div className="nav">
+        <h2>SMIT</h2>
 
-            <div className="nav-icons">
-                <span>Home</span>
-                <span>About</span>
-                <span>Capmuses</span>
-                <span>Check Result</span>
-            </div>
+        <ul className="nav-icons">
+            {navbar.map((items)=>{
+            return <li>{items}</li>
+            })}
+        </ul>
 
-            <button>Enroll Now</button>
+        <button>Enroll Now</button>
 
-        </div>
-    )
+    </div>
+
 }
 
 export default nav
