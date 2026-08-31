@@ -55,12 +55,21 @@ function App() {
     setEditTodo(editItem.id)
     setInput(editItem.title)
 
+    if(editItem){
+      return toastHandler("edit item")
+    }
+
   }
 
   let deleteHandler = (id) => {
-    let deleteTodo = arryTodos.filter((item)=> item.id !== id)
+    let deleteTodo = arryTodos.filter((item) => item.id !== id)
 
     setArryTodos(deleteTodo)
+    
+    if (!deleteTodo.id) {
+      return toastHandler(`delete item`)
+    }
+
   }
 
 
